@@ -1,5 +1,5 @@
 {
-  "name": "jira",
+  "name": "jira-csv",
   "version": "0.0.0",
   "engines": {
     "node": "10.15.3",
@@ -11,14 +11,14 @@
     "clean:node_modules": "npx rimraf node_modules",
     "clean": "yarn clean:coverage && yarn clean:node_modules",
     "lint": "eslint .",
-    "run": "node src/index.js Jira.csv",
+    "jira": "node src/index.js Jira.csv JiraModified.csv",
     "test:jest": "NODE_ENV=test jest --config config/jest/index.js",
     "test:watch": "yarn test:jest --watch",
     "test": "yarn lint && yarn test:jest"
   },
   "dependencies": {
-    "lodash": "4.17.15",
-    "moment": "2.24.0"
+    "csv": "5.3.2",
+    "lodash": "4.17.15"
   },
   "devDependencies": {
     "eslint": "6.4.0",
